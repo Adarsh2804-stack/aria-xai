@@ -1,0 +1,18 @@
+{
+  "name": "Aria XAI",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.13-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+  },
+  "containerEnv": { "ARIAX_ENV": "development" },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [8700],
+  "portsAttributes": {
+    "8700": { "label": "Aria XAI", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] }
+  },
+  "hostRequirements": { "cpus": 2 }
+}
